@@ -1,0 +1,10 @@
+server:
+  port: ${PORT:8761}
+
+eureka:
+  instance:
+    hostname: ${HOSTNAME:localhost}
+    preferIpAddress: ${REGISTRY_PREFER_IP:false}
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

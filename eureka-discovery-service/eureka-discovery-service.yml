@@ -8,3 +8,5 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+  server:
+    wait-time-in-ms-when-sync-empty: 0

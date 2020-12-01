@@ -1,0 +1,21 @@
+server:
+  port: ${PORT:8800}
+spring:
+    datasource:
+    url: ${DB_URL:jdbc:postgresql://db-authentication/auth}
+    username: ${DB_USER:marcello.assis}
+    password: ${DB_PASSWORD:cryptic.writings}
+  rabbitmq:
+    host: ${RMQ_HOST:rabbitmq}
+    port: ${RMQ_PORT:5672}
+    username: ${RMQ_USER:marcello.assis}
+    password: ${RMQ_PASSWORD:cryptic.writings}
+  eureka:
+    client:
+      registerWithEureka: true
+      fetchRegistry: true
+      serviceUrl:
+        defaultZone: ${REGISTRY_URL:http://eureka-discovery:8761}/eureka/
+    instance:
+      preferIpAddress: ${REGISTRY_PREFER_IP:false}
+
